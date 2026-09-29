@@ -1,0 +1,39 @@
+/* src/index.css
+   -----------------------------------------------------------------------
+   Global styles for the whole site. Loaded once, from src/main.jsx.
+   Most component-specific styling is done with Tailwind CSS utility
+   classes directly in the .jsx files (e.g. className="text-2xl font-bold"),
+   so this file mainly handles: loading the site's font and Tailwind
+   itself, plus a couple of small reusable animations.
+   Colors/fonts/animations that Tailwind classes rely on are configured in
+   tailwind.config.js. */
+
+/* Load the "Poppins" font from Google Fonts (used as the site's default
+   font - see the `font-family` rule below and `fontFamily.poppins` in
+   tailwind.config.js). */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* These three lines pull in Tailwind CSS's generated styles. Do not
+   remove them - almost every visual style on the site depends on them. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* A simple "shine" animation (background sliding left-to-right), available
+   to use in components via `animation: shine ...` or a Tailwind utility
+   that references it. */
+@keyframes shine {
+  0% {
+    background-position: -200px;
+  }
+
+  100% {
+    background-position: 200px;
+  }
+}
+
+/* Sets the default font for the entire site to Poppins (falls back to the
+   browser's generic sans-serif font if Poppins fails to load). */
+body {
+  font-family: 'Poppins', sans-serif;
+}

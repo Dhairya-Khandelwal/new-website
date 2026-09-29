@@ -1,0 +1,44 @@
+{
+  "name": "lubricant-website",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+
+  "_comment_scripts": "See README.md for what each script does. 'dev' runs a local dev server. 'build' creates a Cloudflare-Pages-ready build in dist/ (base path '/'). 'build:ghpages' creates a GitHub-Pages-ready build in dist/ (base path '/Lubricant-website/'). 'deploy:ghpages' builds and pushes dist/ to the gh-pages branch as a manual alternative to the GitHub Actions workflow in .github/workflows/deploy-gh-pages.yml.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:ghpages": "vite build --mode ghpages",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "predeploy": "npm run build:ghpages",
+    "deploy:ghpages": "gh-pages -d dist"
+  },
+
+  "dependencies": {
+    "axios": "^1.16.1",
+    "framer-motion": "^12.40.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-icons": "^5.6.0",
+    "react-router-dom": "^7.15.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "autoprefixer": "^10.5.0",
+    "eslint": "^10.2.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "gh-pages": "^6.3.0",
+    "globals": "^17.5.0",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^3.4.19",
+    "vite": "^8.0.10"
+  },
+
+  "homepage": "https://Sanskriti029.github.io/Lubricant-website"
+}

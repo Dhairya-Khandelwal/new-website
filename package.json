@@ -1,0 +1,20 @@
+{
+  "name": "lubricant-website-monorepo",
+  "private": true,
+  "version": "1.0.0",
+
+  "_readme": "This root package.json is just a set of shortcuts so you don't have to 'cd' into the frontend or backend folders. The real React app (and its real dependencies) live in ./frontend. The optional contact-form email server lives in ./backend/server. Run 'npm run install:all' once, then 'npm run dev' to start developing. See README.md for full instructions.",
+
+  "scripts": {
+    "install:all": "npm install --prefix frontend && npm install --prefix backend/server",
+
+    "dev": "npm run dev --prefix frontend",
+
+    "build": "npm run build --prefix frontend",
+    "build:ghpages": "npm run build:ghpages --prefix frontend",
+
+    "deploy:ghpages": "npm run deploy:ghpages --prefix frontend",
+
+    "server": "node backend/server/server.js"
+  }
+}
