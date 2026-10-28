@@ -34,7 +34,7 @@ import react from '@vitejs/plugin-react'
 
 // Change this if your GitHub repository has a different name than
 // "Lubricant-website". It must match exactly (including capitalization).
-const GITHUB_REPO_NAME = 'Lubricant-website'
+const GITHUB_REPO_NAME = 'new-website'
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
